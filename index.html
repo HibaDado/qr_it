@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StackOverVibes</title>
+  <link rel="icon" type="image/png" href="logo.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+      --bg1:#99CDD8;
+      --bg2:#F3C4B2;
+      --text:#657166;
+      --muted: #657166;
+      --border: rgba(153,205,216,.4);
+      --shadow: 0 20px 70px rgba(101,113,102,.2);
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: "Cherry Bomb One", system-ui;
+      color: var(--text);
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding: 22px;
+      background: linear-gradient(180deg, 
+        #99CDD8 0%, 
+        #DAEBE3 20%, 
+        #FDE8D3 40%, 
+        #F3C4B2 60%, 
+        #CFD8C4 80%, 
+        #657166 100%
+      );
+       text-align: center;
+
+    }
+
+    .wrap{
+      width: min(900px, 100%);
+      display:grid;
+      gap:24px;
+    }
+
+    .card{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .top{
+      padding: 0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction: column;
+      gap:16px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .badge{
+      font-size: 14px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #657166;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: rgba(218,235,227,.6);
+      backdrop-filter: blur(6px);
+      white-space:nowrap;
+    }
+
+    h1{
+      margin:0 0 10px 0;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .sub{
+      margin:0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .quote{
+      padding: 0;
+      display:grid;
+      gap:12px;
+      width: 100%;
+      margin: 24px 0;
+        font-size: large;
+    }
+
+    .line{
+      font-size: clamp(18px, 2.8vw, 24px);
+      font-weight: 600;
+      padding: 18px 22px;
+      border-radius: 12px;
+      border: 1px solid rgba(153,205,216,.4);
+      background: rgba(253,232,211,.5);
+    }
+
+    .line strong{
+      font-weight: 800;
+    }
+
+    .imageBox{
+      padding: 0;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      gap:10px;
+      width: 100%;
+    }
+
+    .img{
+      width:50%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(153,205,216,.5);
+      background: rgba(207,216,196,.3);
+    }
+
+    .hint{
+      margin:0;
+      color: rgba(101,113,102,.7);
+      font-size: 12px;
+    }
+
+    .footer{
+      text-align:center;
+      color: rgba(223, 238, 224, 0.893);
+      font-size: 14px;
+      padding: 6px 0 0;
+    }
+
+    /* small screens */
+    @media (max-width: 520px){
+      .top{ flex-direction:column; }
+      .badge{ align-self:center; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="top">
+        <div>
+          <h1>You know this could’ve been a bad idea.</h1>
+          <p class="sub">But hey… you scanned anyway 😌</p>
+        </div>
+      </div>
+
+      <div class="quote">
+
+        You don’t need a perfect plan  <br> you just need a first step.
+      </div>
+
+      <div class="imageBox">
+        <!-- Put the image file in the same folder and name it: cat.jpg -->
+        <img class="img" src="cat.jpg" alt="New year new mental issues meme" />
+      </div>
+    </section>
+
+    <div class="footer">wish you a good day:)✨</div>
+  </main>
+</body>
+</html>
